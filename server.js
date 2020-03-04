@@ -11,7 +11,7 @@ app.all('/', (req, res) => {
   console.log("*********X-Code***************", xCode);
   if (xCode == 500){
     const page500 = fs.readFileSync(__dirname + '/content/500.html', 'utf8');
-    res.status(500).send(page500);  
+    res.status(500).send(page500);
   } else if (xCode == 403){
     const page403 = fs.readFileSync(__dirname + '/content/403.html', 'utf8');
     res.status(403).send(page403); 
